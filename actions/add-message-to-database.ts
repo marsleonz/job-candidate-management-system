@@ -8,7 +8,7 @@ export async function addMessageToDatabase(input: string) {
   console.log(input, "is the input");
   try {
     await db.insert(messages).values({ message: input });
-    revalidatePath("/");
+    revalidatePath("/candidates");
   } catch (error) {
     console.log(error);
     return {

@@ -14,12 +14,12 @@ export default function Header() {
       <nav>
         <ul className="flex gap-x-5 text-[14px]">
           <Link
-            href="/posts"
+            href="/candidates"
             className={`hover:text-stone-900 ${
-              pathname === "/posts" ? "text-stone-900" : "text-stone-400"
+              pathname === "/candidates" ? "text-stone-900" : "text-stone-400"
             }`}
           >
-            <li>Posts</li>
+            <li>Candidates</li>
           </Link>
         </ul>
       </nav>
