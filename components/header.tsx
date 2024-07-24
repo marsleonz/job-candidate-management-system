@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center py-4 px-7 border-b mb-8">
       <Link href={"/"}>
-        <p>cdbrw</p>
+        <p>Home</p>
       </Link>
       <nav>
         <ul className="flex gap-x-5 text-[14px]">

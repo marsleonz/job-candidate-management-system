@@ -9,8 +9,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "cdbrw",
-  description: "a very lame blog app. please don't index it.",
+  title: "Job Candidate Management System",
+  description: "An application for management of job candidates",
 };
 
 export default function RootLayout({
