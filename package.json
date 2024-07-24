@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:local": "turso dev --db-file local-db.db",
+    "db:generate": "drizzle-kit generate",
+    "db:studio": "drizzle-kit studio",
+    "migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@libsql/client": "^0.7.0",
