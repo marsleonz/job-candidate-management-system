@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Job Candidate Management System",
-  description: "An application for management of job candidates",
+  description: "A job candidate management system",
 };
 
 export default function RootLayout({
@@ -20,10 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Header />
-        <main className="flex flex-col items-center w-full">{children}</main>
-        <Footer />
+      <body
+        className={cn(
+          "min-h-screen bg-dark-300 font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

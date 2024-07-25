@@ -1,10 +1,13 @@
 import CandidatesList from "@/components/candidates-list";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Title from "@/components/title";
 import { Suspense } from "react";
 
 export default async function Page() {
   return (
     <section>
+      <Header />
       <Title text="All Candidates" />
 
       <Suspense fallback={<p>Loading...</p>}>
@@ -13,6 +16,7 @@ export default async function Page() {
           <CandidatesList />
         </div>
       </Suspense>
+      <Footer />
     </section>
   );
 }

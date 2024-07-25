@@ -7,16 +7,27 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="flex justify-between items-center py-4 px-7 border-b mb-8">
+    <header className="flex justify-between items-center mb-8">
       <Link href={"/"}>
-        <p>Home</p>
+        <p
+          className={`${
+            pathname === "/candidates"
+              ? "text-red-700 text-18-bold  hover:text-red-400"
+              : "text-18-bold "
+          }`}
+        >
+          Home
+        </p>
       </Link>
+
       <nav>
         <ul className="flex gap-x-5 text-[14px]">
           <Link
             href="/candidates"
-            className={`hover:text-stone-900 ${
-              pathname === "/candidates" ? "text-stone-900" : "text-stone-400"
+            className={`text-18-bold ${
+              pathname === "/candidates"
+                ? " text-18-bold"
+                : "hover:text-red-400 text-red-700 "
             }`}
           >
             <li>Candidates</li>
