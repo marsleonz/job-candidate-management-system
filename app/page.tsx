@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { CandidateSchema } from "@/lib/types";
 import { createCandidate } from "@/actions/candidates";
 import Image from "next/image";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
