@@ -24,13 +24,11 @@ const success = () => {
             Your <span className="text-red-700">candidate information</span> has
             been successfully submitted!
           </h2>
-          <p>
-            Please go back to add new candidates or continue to candidates list
-          </p>
+          <p>Please go back to add new candidates or continue to Dashboard</p>
         </section>
 
         <Button variant="outline" className="shad-primary-btn" asChild>
-          <Link href={`/candidates`}>Candidate List</Link>
+          <Link href={`/candidates`}>Dashboard</Link>
         </Button>
 
         <p className="copyright">© 2024. All rights reserved</p>
