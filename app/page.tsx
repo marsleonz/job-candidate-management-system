@@ -55,9 +55,9 @@ export default function CandidateForm() {
   };
 
   return (
-    <div className="flex h-screen max-h-screen">
-      <section className="remove-scrollbar container my-auto">
-        <header className="admin-header">
+    <div className="flex min-h-screen">
+      <section className="flex flex-col w-full lg:w-1/2 overflow-y-auto">
+        <header className="admin-header sticky top-0 z-10">
           <Image
             src="/assets/logo.svg"
             height={100}
@@ -69,11 +69,11 @@ export default function CandidateForm() {
             <p className="text-16-semibold">Dashboard</p>
           </Link>
         </header>
-        <div className="sub-container max-w-[596px]">
+        <div className="flex-grow p-6 max-w-[596px] mx-auto">
           <form
             action={handleCreateCandidate}
             ref={ref}
-            className="flex-1 space-y-12"
+            className=" space-y-12"
           >
             <section className="mb-12 space-y-4">
               <h1 className="header">Hi there 👋</h1>
@@ -196,13 +196,15 @@ export default function CandidateForm() {
           <Footer />
         </div>
       </section>
-      <Image
-        src="/assets/onboarding.jpg"
-        height={1000}
-        width={1000}
-        alt="patient"
-        className="side-img max-w-[50%]"
-      />
+      <div className="hidden lg:block w-1/2 relative">
+        <Image
+          src="/assets/onboarding.jpg"
+          layout="fill"
+          objectFit="cover"
+          alt="onboarding"
+          priority
+        />
+      </div>
     </div>
   );
 }
