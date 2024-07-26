@@ -69,7 +69,7 @@ export default function CandidateForm() {
             <p className="text-16-semibold">Dashboard</p>
           </Link>
         </header>
-        <div className="flex-grow overflow-y-auto">
+        <div className="flex-grow overflow-y-auto thin-scrollbar">
           <div className="p-6 max-w-[596px] mx-auto">
             <form
               action={handleCreateCandidate}
