@@ -44,7 +44,7 @@ export const columns: ColumnDef<Candidate>[] = [
     header: "LinkedIn",
     cell: (info) =>
       info.getValue() ? (
-        <a href={info.getValue()} target="_blank">
+        <a href={info.getValue() as string} target="_blank">
           Profile
         </a>
       ) : (
@@ -56,7 +56,7 @@ export const columns: ColumnDef<Candidate>[] = [
     header: "GitHub",
     cell: (info) =>
       info.getValue() ? (
-        <a href={info.getValue()} target="_blank">
+        <a href={info.getValue() as string} target="_blank">
           Profile
         </a>
       ) : (
