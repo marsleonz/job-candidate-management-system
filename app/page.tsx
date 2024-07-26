@@ -10,10 +10,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function CandidateForm() {
   const ref = useRef<HTMLFormElement>(null);
-
+  const router = useRouter();
   const handleCreateCandidate = async (formData: FormData) => {
     const newCandidate = {
       firstName: formData.get("firstName"),
@@ -50,6 +51,7 @@ export default function CandidateForm() {
 
     // reset the form
     ref.current?.reset();
+    router.push(`/success`);
   };
 
   return (
@@ -156,7 +158,7 @@ export default function CandidateForm() {
             </div>
             <div className="grid w-full max-w-sm items-center gap-1.5">
               <Label className="shad-input-label" htmlFor="comment">
-                Comments
+                Comments *
               </Label>
               <Textarea
                 className="shad-textArea"
@@ -164,6 +166,7 @@ export default function CandidateForm() {
                 rows={3}
                 placeholder="Comments"
                 id="comment"
+                required
               />
             </div>
             <div className="flex w-full justify-end">
