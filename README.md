@@ -32,8 +32,9 @@ This project is a web application for storing and managing information about job
 ### Option 1: Using Pre-configured Turso Database
 
 1. Clone the repository:
-   git clone https://github.com/marsleonz/job-candidate-management-system.git
-   cd job-candidate-management-system
+
+- git clone https://github.com/marsleonz/job-candidate-management-system.git
+- cd job-candidate-management-system
 
 2. Install dependencies:
    npm install
@@ -48,8 +49,9 @@ This project is a web application for storing and managing information about job
 ### Option 2: Using Local Database
 
 1. Clone the repository:
-   git clone https://github.com/marsleonz/job-candidate-management-system.git
-   cd job-candidate-management-system
+
+- git clone https://github.com/marsleonz/job-candidate-management-system.git
+- cd job-candidate-management-system
 
 2. Install dependencies:
    npm install
