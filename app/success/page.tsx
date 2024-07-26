@@ -21,7 +21,7 @@ const success = () => {
             alt="success"
           />
           <h2 className="header mb-6 max-w-[600px] text-center">
-            Your <span className="text-red-700">candidate information</span> has
+            Your <span className="text-red-800">candidate information</span> has
             been successfully submitted!
           </h2>
           <p>Please go back to add new candidates or continue to Dashboard</p>

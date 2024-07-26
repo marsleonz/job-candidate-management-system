@@ -26,10 +26,7 @@ export const CandidateSchema = createInsertSchema(candidates, {
       invalid_type_error: "Phone number must be a string",
     })
     .trim()
-    .min(10, { message: "Phone number must be at least 10 characters long" })
-    .max(15, { message: "Phone number must not exceed 15 characters" })
     .optional(),
-
   email: z
     .string({
       required_error: "Email is required",
@@ -51,7 +48,6 @@ export const CandidateSchema = createInsertSchema(candidates, {
       invalid_type_error: "LinkedIn URL must be a string",
     })
     .trim()
-    .url({ message: "Invalid LinkedIn URL" })
     .max(200, { message: "LinkedIn URL must not exceed 200 characters" })
     .optional(),
 
@@ -60,7 +56,6 @@ export const CandidateSchema = createInsertSchema(candidates, {
       invalid_type_error: "GitHub URL must be a string",
     })
     .trim()
-    .url({ message: "Invalid GitHub URL" })
     .max(200, { message: "GitHub URL must not exceed 200 characters" })
     .optional(),
 
